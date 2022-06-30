@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.colecaodemusicas.colecaodemusicas.model.Musica;
-import com.colecaodemusicas.colecaodemusicas.service.MusicaServiceimpl;
+import com.colecaodemusicas.colecaodemusicas.service.MusicaService;
 import com.colecaodemusicas.colecaodemusicas.shared.MusicaDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/musicas")
 public class MusicaController {
     @Autowired
-    private MusicaServiceimpl servico; 
+    private MusicaService servico; 
 
     @PostMapping
     public ResponseEntity<Object> SalvarMusica(@RequestBody Musica musica){
